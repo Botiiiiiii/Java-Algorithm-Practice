@@ -9,7 +9,7 @@ public class CurrencyCnt {
 
         int[] Moneytype = {50000, 10000, 5000, 1000, 500, 100, 50, 10};
 
-        for (int i = 0 ; i < 8 ; i ++) {
+        for (int i = 0 ; i < Moneytype.length ; i ++) {
             int num = total / Moneytype[i];
             total %= Moneytype[i];
             System.out.printf("%d원%d개\n",Moneytype[i],num);
