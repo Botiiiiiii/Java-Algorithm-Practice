@@ -6,9 +6,9 @@ public class CalculatorMain {
         int num2 = 5;
 
         Calculator cal = new Calculator();
-        System.out.println(cal.plus(num1,num2));
-        System.out.println(cal.minus(num1,num2));
-        System.out.println(cal.multiple(num1,num2));
-        System.out.println(cal.divide(num1,num2));
+        cal.plus(num1,num2);
+        cal.minus(num1,num2);
+        cal.multiple(num1,num2);
+        cal.divide(num1,num2);
     }
 }

@@ -2,20 +2,24 @@ package Week3;
 
 public class Calculator {
 
-    public int plus(int a, int b){
-        return a+b;
+    public void plus(int a, int b){
+        int result = a+b;
+        System.out.println(result);
     }
 
-    public int minus(int a, int b){
-        return a-b;
+    public void minus(int a, int b){
+        int result = a-b;
+        System.out.println(result);
     }
 
-    public int multiple(int a, int b){
-        return a*b;
+    public void multiple(int a, int b){
+        int result = a*b;
+        System.out.println(result);
     }
 
-    public int divide(int a, int b){
-        return a/b;
+    public void divide(int a, int b){
+        int result = a/b;
+        System.out.println(result);
     }
 
 }
