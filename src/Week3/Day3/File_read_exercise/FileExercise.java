@@ -10,4 +10,12 @@ public class FileExercise {
             System.out.println(file);
         }
     }
+
+//        .\.git
+//        .\.gitignore
+//        .\.idea
+//        .\afile.txt
+//        .\java-exercise-push.iml
+//        .\out
+//        .\src
 }
