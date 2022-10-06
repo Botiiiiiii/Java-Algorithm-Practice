@@ -1,4 +1,4 @@
-package collection;
+package Week3.Day3.collection;
 
 import java.util.HashMap;
 
