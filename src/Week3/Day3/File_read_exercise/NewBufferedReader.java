@@ -11,9 +11,9 @@ public class NewBufferedReader {
         try(BufferedReader br = Files.newBufferedReader(
                 Paths.get(filename), StandardCharsets.UTF_8)){
 
-            char line;
-            line = (char) br.read();
-            System.out.println(line);
+            char one;
+            one = (char) br.read();
+            System.out.println(one);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
