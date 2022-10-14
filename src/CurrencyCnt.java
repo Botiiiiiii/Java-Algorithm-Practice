@@ -15,10 +15,6 @@ public class CurrencyCnt {
             System.out.printf("%d원%d개\n",Moneytype[i],num);
         }
 
-
-
-
-
         in.close();
     }
 }
