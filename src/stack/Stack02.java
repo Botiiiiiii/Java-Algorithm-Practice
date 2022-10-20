@@ -1,5 +1,7 @@
 package stack;
 
+import java.util.EmptyStackException;
+
 public class Stack02 {
     private Integer[] arr;
     private int top = 0;
@@ -23,7 +25,14 @@ public class Stack02 {
         return arr;
     }
 
+    public boolean isEmpty() {
+        return this.top == -1;
+    }
+
     public int peek() {
+        if(this.isEmpty()){
+            throw  new EmptyStackException();
+        }
         return this.arr[this.top];
     }
 }
