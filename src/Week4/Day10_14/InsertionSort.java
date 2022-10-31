@@ -9,7 +9,7 @@ public class InsertionSort {
         arr[b] = temp;
         System.out.println("swap");
     }*/
-    public void sort(int[] arr) {
+    public int[] sort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int j;
             int temp = arr[i];
@@ -21,11 +21,12 @@ public class InsertionSort {
             arr[j] = temp;
             System.out.println(Arrays.toString(arr));
         }
+        return arr;
     }
 
 
     public static void main(String[] args) {
-        insertionSort s = new insertionSort();
+        InsertionSort s = new InsertionSort();
         int arr[] = new int[]{8, 5, 6, 2, 4};
         s.sort(arr);
     }

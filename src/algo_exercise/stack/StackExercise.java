@@ -1,4 +1,4 @@
-package stack;
+package algo_exercise.stack;
 
 import java.util.Stack;
 

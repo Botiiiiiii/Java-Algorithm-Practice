@@ -1,4 +1,4 @@
-package stack;
+package algo_exercise.stack;
 
 import java.util.EmptyStackException;
 
@@ -18,6 +18,7 @@ public class Stack02 {
         this.arr[top++] = value;
     }
     public int pop(){
+
         return this.arr[--this.top];
     }
 
