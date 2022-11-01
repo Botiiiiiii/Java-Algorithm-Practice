@@ -1,4 +1,4 @@
-package algo_exercise;
+package algo_exercise.prime;
 
 public class Prime {
     public boolean isPrime1(int num){ // 1 ~ num-1까지 모든 수 나누기 연산 진행
@@ -9,13 +9,6 @@ public class Prime {
         }
         return true;
     }
-
-//    public boolean isPrime2(int num){
-//        int len = num / 2;
-//        for (int i = 0; i < len; i++) {
-//
-//        }
-//    }
 
     public static void main(String[] args) {
         Prime p = new Prime();
