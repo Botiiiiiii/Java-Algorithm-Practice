@@ -1,20 +1,25 @@
 package algo_exercise.prime;
-
+//익명 내부클래스 사용방법
+interface StatementStrategy{
+    boolean compare(int a, int b);
+}
 public class TemplateCallbackPrime {
-    boolean Operation(int a, int b){
-        return a<b;
-    }
 
-    boolean isPrime(int num){
-        for (int i = 2; Operation(i,num); i++) {
+    boolean isPrime(int num, StatementStrategy stmt){
+        for (int i = 2; stmt.compare(i,num); i++) {
             if(num%i==0) return false;
         }
         return true;
     }
 
     public static void main(String[] args) {
-        TemplateCallbackPrime templateCallbackPrime = new TemplateCallbackPrime();
-        boolean r = templateCallbackPrime.isPrime(10);
+        TemplateCallbackPrime tcp = new TemplateCallbackPrime();
+        boolean r = tcp.isPrime(17, new StatementStrategy() {
+            @Override
+            public boolean compare(int a, int b) {
+                return a*a <= b;
+            }
+        });
         System.out.println(r);
     }
 }
