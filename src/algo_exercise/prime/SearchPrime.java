@@ -12,7 +12,7 @@ public class SearchPrime {
         Arrays.fill(checks, true); // checks를 true로 초기화 cuz 기본값 false
         for (int i = 0; i < nums.length; i++) nums[i] = i + 2; // 2~50까지 nums에 채우기
 
-        for (int i = 0; i < nums.length; i+=2) {
+        for (int i = 2; i < nums.length; i+=2) {
             checks[i] = false;
         }
 
