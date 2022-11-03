@@ -11,6 +11,17 @@ public class SearchPrime {
         boolean[] checks = new boolean[nums.length]; // nums만큼 checks생성
         Arrays.fill(checks, true); // checks를 true로 초기화 cuz 기본값 false
         for (int i = 0; i < nums.length; i++) nums[i] = i + 2; // 2~50까지 nums에 채우기
+
+        for (int i = 0; i < nums.length; i+=2) {
+            checks[i] = false;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (checks[i]){
+                System.out.printf("%d ", nums[i]);
+            }
+        }
+
         return true;
     }
 
