@@ -7,22 +7,24 @@ public class BinarySearch {
         // 중간값 찾기
         int startIdx = 0;
         int endIdx = nums.length - 1;
-        int midIdx = nums.length / 2;
-        int midValue = nums[midIdx];
-        // 인덱스(시작점, 끝점) 옮기기
-        while() {
-            if (midValue > targetNum) { // 7이 6보다 큽니까? 작은것 모두 버림
-                startIdx = midIdx + 1;
-            } else if (midValue < targetNum) { // 6 이상을 모두 버림
+        int targetIdx = -1;
+
+        while (startIdx <= endIdx) {
+            int midIdx = (startIdx + endIdx) / 2;
+            int midValue = nums[midIdx];
+            // 인덱스(시작점, 끝점) 옮기기
+            if (midValue > targetNum) { //  1 -(3)- 6 --- 11
                 endIdx = midIdx - 1;
+            } else if (midValue < targetNum) { //  1 --- 6 --(8)- 11
+                startIdx = midIdx + 1;
             } else {
                 // 같은경우 = 답
                 // 같은지 비교하기
                 System.out.println(midIdx);
+                targetIdx = midIdx;
+                break;
             }
-
         }
-
-
+        System.out.println(targetIdx);
     }
 }
