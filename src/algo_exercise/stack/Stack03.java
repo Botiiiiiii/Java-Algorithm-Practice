@@ -9,13 +9,14 @@ public class Stack03 {
         List<Integer> answerList = new ArrayList<>();
 
         for (int i = 0; i < arr.length; i++) {
-            if (answerList.indexOf(arr[i]) == -1) answerList.add(arr[i]);
-
-            for (int j = i; j > 0; j--) {
-
+            if (i == 0) {
+                answerList.add(arr[i]);
+            }
+            else{
+                if (arr[i] != arr[i-1])
+                    answerList.add(arr[i]);
             }
         }
-        System.out.println(answerList);
 
         int[] answer = new int[answerList.size()];
 
