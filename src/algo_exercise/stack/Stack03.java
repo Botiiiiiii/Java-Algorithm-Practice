@@ -3,25 +3,20 @@ package algo_exercise.stack;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 public class Stack03 {
     public int[] solution(int []arr) {
-        List<Integer> answerList = new ArrayList<>();
-
-        for (int i = 0; i < arr.length; i++) {
-            if (i == 0) {
-                answerList.add(arr[i]);
-            }
-            else{
-                if (arr[i] != arr[i-1])
-                    answerList.add(arr[i]);
-            }
+        Stack<Integer> st = new Stack<>();
+        st.push(arr[0]);
+        for (int i = 1; i < arr.length; i++) {
+            if(st.peek() != arr[i]) st.push(arr[i]);
         }
+        System.out.println(st);
+        int[] answer = new int[st.size()];
 
-        int[] answer = new int[answerList.size()];
-
-        for (int i = 0; i < answerList.size(); i++) {
-            answer[i] = answerList.get(i);
+        for (int i = st.size() -1 ; i >= 0; i--) {
+            answer[i] = st.pop();
         }
         return answer;
     }
