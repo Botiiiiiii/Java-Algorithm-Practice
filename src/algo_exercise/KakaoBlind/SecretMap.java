@@ -3,13 +3,19 @@ package algo_exercise.KakaoBlind;
 
 public class SecretMap {
     public String[] solution(int n, int[] arr1, int[] arr2) {
-        String[] answer = new String[]{"123","123"};
-        String arr1_list = "";
-        while(arr1[0] > 0) {
-            arr1_list = arr1[0] % 2 + arr1_list;
-            arr1[0] /= 2;
+        String[] answer = new String[n];
+        String[] tmp_list = new String[n];
+
+
+        for (int i = 0; i < n; i++) {
+            String solv = Integer.toBinaryString(arr1[i] | arr2[i]);
+            solv = "0".repeat(n - solv.length()) + solv;
+            solv = solv.replace("1","#");
+            solv = solv.replace("0"," ");
+            answer[i] = solv;
+            System.out.println();
         }
-        System.out.println(arr1_list);
+
         return answer;
     }
 
@@ -21,3 +27,4 @@ public class SecretMap {
         secretMap.solution(n,arr1,arr2);
     }
 }
+
