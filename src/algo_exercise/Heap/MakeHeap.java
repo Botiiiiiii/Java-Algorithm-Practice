@@ -3,6 +3,11 @@ package algo_exercise.Heap;
 import java.util.Arrays;
 
 public class MakeHeap {
+
+    public static int[] childIdx(int parentIdx){
+        return new int[]{2 * parentIdx + 1, 2 * parentIdx + 2};
+    }
+
     public static void main(String[] args) {
         int[] arr = {6,5,7,8};
         System.out.println(Arrays.toString(arr));
